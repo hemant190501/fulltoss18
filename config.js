@@ -1,2 +1,2 @@
-/* Pages serves the published events JSON feed. */
-window.FULLTOSS_CONFIG={feedUrl:"/events.json",refreshMs:60000};
+/* The private feed connection will be configured after publication approval. */
+window.FULLTOSS_CONFIG={feedUrl:"",refreshMs:60000};
