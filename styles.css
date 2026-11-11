@@ -70,3 +70,87 @@
   #streams{justify-content:flex-start}
   #streams button{font-size:9px;padding:9px 10px}
 }
+
+
+/* Mobile layout improvements */
+@media (max-width: 600px) {
+  header {
+    height: auto;
+    min-height: 64px;
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 10px;
+  }
+  .logo { font-size: 21px; line-height: 1; }
+  .logo small { font-size: 7px; letter-spacing: 1.5px; }
+  header nav {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    gap: 8px;
+  }
+  header nav a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    border: 1px solid rgba(94,240,223,.22);
+    border-radius: 8px;
+    background: rgba(94,240,223,.05);
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  header .live { font-size: 8px; white-space: nowrap; }
+  main { padding: 0 13px; }
+  .hero {
+    min-height: 320px;
+    padding: 34px 0 24px;
+    align-items: center;
+  }
+  .hero > div:first-child { position: relative; z-index: 1; max-width: 100%; }
+  .hero label, .sectionhead label { font-size: 8px; letter-spacing: 1.7px; }
+  .hero h1 { font-size: clamp(43px, 12vw, 57px); line-height: .94; }
+  .hero p { max-width: 250px; font-size: 11px; line-height: 1.55; }
+  .stats { gap: clamp(14px, 5vw, 23px); margin-top: 22px; }
+  .stats b { font-size: 25px; }
+  .stats small { font-size: 7px; letter-spacing: 1px; }
+  .orb { width: 150px; height: 150px; right: -88px; top: 75px; font-size: 43px; }
+  .sectionhead { gap: 10px; align-items: center; margin: 27px 0 14px; }
+  .sectionhead h2 { font-size: 29px; }
+  .sectionhead > small { max-width: 45%; text-align: right; font-size: 8px; }
+  .toolbar { display: flex; flex-direction: column; align-items: stretch; gap: 10px; margin: 16px 0 10px; }
+  #tabs { display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 2px 0 7px; scrollbar-width: thin; }
+  #tabs button { flex: 0 0 auto; padding: 10px 12px; font-size: 9px; }
+  #search { width: 100%; min-width: 0; height: 42px; font-size: 12px; }
+  #categories { gap: 6px; padding: 5px 0 12px; }
+  #categories button { flex: 0 0 auto; padding: 9px 12px; font-size: 9px; }
+  #notice { font-size: 9px; line-height: 1.5; }
+  #cards { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .cardtop, .cardbottom { padding: 10px; font-size: 8px; }
+  .cardmain { gap: 10px; padding: 5px 10px 12px; }
+  .cardmain img, .cardmain i { width: 54px; height: 54px; flex: 0 0 54px; }
+  .cardmain h3 { font-size: 16px; line-height: 1.2; }
+  .cardmain small { font-size: 9px; }
+  .player { padding: 5px; border-radius: 14px; }
+  .screen { width: 100%; min-height: 0; aspect-ratio: 16 / 9; max-height: none; }
+  #placeholder { padding: 12px; }
+  #placeholder b { width: 48px; height: 48px; }
+  #placeholder strong { font-size: 17px; }
+  #placeholder small { font-size: 9px; }
+  .playerbar { align-items: stretch; padding: 11px 6px 5px; }
+  #playing { font-size: 12px; overflow-wrap: anywhere; }
+  #streams { display: flex; justify-content: flex-start; }
+  #streams button { padding: 10px 11px; font-size: 9px; }
+  footer { gap: 12px; padding: 22px 0; margin-top: 30px; font-size: 8px; }
+  #toast { width: calc(100% - 28px); text-align: center; }
+}
+@media (max-width: 380px) {
+  header { padding-left: 11px; padding-right: 11px; }
+  .logo { font-size: 19px; }
+  header .live { font-size: 7px; letter-spacing: .8px; }
+  .hero h1 { font-size: 42px; }
+  .stats { gap: 13px; }
+  .stats b { font-size: 22px; }
+  .sectionhead h2 { font-size: 26px; }
+}
